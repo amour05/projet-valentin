@@ -19,9 +19,9 @@
 
   <!-- Premier message -->
   <h1 id="message1">
-    Je te veux entièrement.<br><br>
-    Toi, avec ton passé.<br><br>
-    Toi et tes défauts, tes qualités... Avec tes rêves et tes idées.<br><br>
+    Je te veux entièrement.<br>
+    Toi, avec ton passé.<br>
+    Toi et tes défauts, tes qualités... Avec tes rêves et tes idées.<br>
     Je te veux entièrement.
   </h1>
 
