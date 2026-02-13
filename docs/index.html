@@ -2,15 +2,52 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Surprise romantique</title>
-  <link rel="stylesheet" href="/css/style.css">
   <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #ffebef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+    }
+
     h1 {
       opacity: 0;
       transition: opacity 2s ease-in;
       color: #b3003c;
       text-align: center;
       line-height: 1.8;
+    }
+
+    .rose {
+      width: 120px;
+      height: 120px;
+      background: url('images/rose.png') no-repeat center/contain;
+      animation: float 3s infinite alternate;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-20px); }
+    }
+
+    .petal {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: url('images/petal.png') no-repeat center/contain;
+      animation: fall 6s linear forwards;
+    }
+
+    @keyframes fall {
+      from { transform: translateY(-50px) rotate(0deg); opacity: 1; }
+      to { transform: translateY(100vh) rotate(180deg); opacity: 0; }
     }
   </style>
 </head>
@@ -35,7 +72,6 @@
     Bonne Saint-Valentin ❤️
   </h1>
 
-  <script src="/js/script.js"></script>
   <script>
     // Premier message après 2 secondes
     setTimeout(() => {
@@ -55,6 +91,19 @@
       document.getElementById("message3").style.display = "block";
       document.getElementById("message3").style.opacity = 1;
     }, 16000);
+
+    // Génère des pétales qui tombent
+    function createPetal() {
+      const petal = document.createElement("div");
+      petal.classList.add("petal");
+      petal.style.left = Math.random() * window.innerWidth + "px";
+      document.body.appendChild(petal);
+
+      setTimeout(() => petal.remove(), 6000);
+    }
+
+    // Lancer des pétales toutes les 500ms
+    setInterval(createPetal, 500);
   </script>
 </body>
 </html>

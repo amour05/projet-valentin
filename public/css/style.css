@@ -19,7 +19,7 @@ h1 {
 .rose {
   width: 120px;
   height: 120px;
-  background: url('../images/rose.png') no-repeat center/contain;
+  background: url('/images/rose.png') no-repeat center/contain;
   animation: float 3s infinite alternate;
 }
 
@@ -32,7 +32,7 @@ h1 {
   position: absolute;
   width: 30px;
   height: 30px;
-  background: url('../images/petal.png') no-repeat center/contain;
+  background: url('/images/petal.png') no-repeat center/contain;
   animation: fall 6s linear forwards;
 }
 
