@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #ffebef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+h1 {
+  opacity: 0;
+  transition: opacity 2s ease-in;
+  color: #b3003c;
+}
+
+.rose {
+  width: 120px;
+  height: 120px;
+  background: url('../images/rose.png') no-repeat center/contain;
+  animation: float 3s infinite alternate;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+
+.petal {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url('../images/petal.png') no-repeat center/contain;
+  animation: fall 6s linear forwards;
+}
+
+@keyframes fall {
+  from { transform: translateY(-50px) rotate(0deg); opacity: 1; }
+  to { transform: translateY(100vh) rotate(180deg); opacity: 0; }
+}
