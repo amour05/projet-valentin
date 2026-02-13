@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Surprise romantique</title>
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  <link rel="stylesheet" href="style.css">
   <style>
     h1 {
       opacity: 0;
@@ -35,7 +35,7 @@
     Bonne Saint-Valentin ❤️
   </h1>
 
-  <script src="{{ asset('js/script.js') }}"></script>
+  <script src="script.js"></script>
   <script>
     // Premier message après 2 secondes
     setTimeout(() => {
@@ -58,4 +58,3 @@
   </script>
 </body>
 </html>
-
