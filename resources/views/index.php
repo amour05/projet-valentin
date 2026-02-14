@@ -23,7 +23,7 @@
     Toi, avec ton passé.<br>
     Toi et tes défauts, tes qualités... Avec tes rêves et tes idées.<br>
     Je te veux entièrement.
-  </h1>
+  </h1> 
 
   <!-- Second message -->
   <h1 id="message2" style="display:none;">
